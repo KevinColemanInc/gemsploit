@@ -2,6 +2,8 @@
 
 Proof of concept for ruby bundler exploit. When this gem is installed, it posts all of your ENV files to my server.
 
+Any gem you install gets full access to your message (per the account bundler install was run as). This includes read access to `~/.ssh`, your ENV vars, etc.
+
 ## How it works
 
 When a gem is installed, the code block in the `*.gemspec` file is executed. This gem contains a [malicious payload](https://github.com/KevinColemanInc/gemsploit/blob/master/gemsploit.gemspec#L41) to post all of your ENV variables to a remote server when the gem is installed (`$ bundle` or `$ gem install gemsploit`)

