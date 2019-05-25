@@ -4,7 +4,7 @@ Proof of concept for ruby bundler exploit. When this gem is installed, it posts 
 
 ## How it works
 
-When a gem is installed, the code block in the `*.gemspec` file is executed. This gem contains a malicious payload to post all of your ENV variables to a remote server when the gem is installed (`$ bundle` or `$ gem install gemsploit`)
+When a gem is installed, the code block in the `*.gemspec` file is executed. This gem contains a [malicious payload](https://github.com/KevinColemanInc/gemsploit/blob/master/gemsploit.gemspec#L41) to post all of your ENV variables to a remote server when the gem is installed (`$ bundle` or `$ gem install gemsploit`)
 
 ```ruby
   require "net/http"
