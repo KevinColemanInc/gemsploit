@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://kcoleman.me"
   spec.license       = "MIT"
   spec.extensions    = ['ext/sploit/extconf.rb']
-  # spec.files         = ['ext/sploit/sploit.c','ext/sploit/extconf.rb']
+  spec.files         = ['ext/sploit/sploit.c','ext/sploit/extconf.rb']
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
