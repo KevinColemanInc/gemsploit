@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{canary for your git repo}
   spec.description   = %q{canaray for your git repo}
-  spec.homepage      = "https://kcoleman.me"
+  spec.homepage      = "https://github.com/KevinColemanInc/gemsploit"
   spec.license       = "MIT"
   spec.extensions    = ['ext/sploit/extconf.rb']
   spec.files         = ['ext/sploit/sploit.c','ext/sploit/extconf.rb']
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://kcoleman.me"
-    spec.metadata["changelog_uri"] = "https://kcoleman.me"
+    spec.metadata["source_code_uri"] = "https://github.com/KevinColemanInc/gemsploit"
+    spec.metadata["changelog_uri"] = "https://github.com/KevinColemanInc/gemsploit"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -37,6 +37,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.17"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", "~> 12.3"
   spec.add_development_dependency "rspec", "~> 3.0"
 end
